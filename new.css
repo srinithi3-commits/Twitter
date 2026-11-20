@@ -1,0 +1,284 @@
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+body{
+    background:#f5f8fa;
+}
+.container{
+    display:flex;
+    min-height:100vh;
+}
+.sidebar{
+    width:250px;
+    background:#000;
+    color:#fff;
+    padding:20px;
+    position:fixed;
+    height:100%;
+}
+.logo{
+    font-size:40px;
+    text-align:center;
+    margin-bottom:30px;
+}
+.sidebar ul{
+    list-style:none;
+}
+.sidebar li{
+    padding:15px;
+    margin:8px 0;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+.sidebar li:hover{
+    background:#1d9bf0;
+}
+.sidebar i{
+    width:30px;
+}
+.tweet-btn{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:#1d9bf0;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+}
+.tweet-btn:hover{
+    background:#0c86e4;
+}
+.main{
+    margin-left:250px;
+    width:calc(100% - 550px);
+    padding:20px;
+}
+.page{
+    display:none;
+}
+.page.active{
+    display:block;
+}
+h2{
+    margin-bottom:20px;
+}
+.tweet-box{
+    display:flex;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+.tweet-box img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+.input-area{
+    width:100%;
+    margin-left:15px;
+}
+textarea{
+    width:100%;
+    height:90px;
+    border:none;
+    resize:none;
+    outline:none;
+    font-size:17px;
+}
+.input-area button{
+    float:right;
+    margin-top:10px;
+    padding:10px 25px;
+    border:none;
+    border-radius:25px;
+    background:#1d9bf0;
+    color:white;
+    cursor:pointer;
+}
+.tweet{
+    display:flex;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+.tweet img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+.content{
+    margin-left:15px;
+    width:100%;
+}
+.content h3{
+    margin-bottom:8px;
+}
+.content p{
+    margin-bottom:12px;
+}
+.verify{
+    color:#1d9bf0;
+}
+.actions{
+    display:flex;
+    justify-content:space-between;
+    color:gray;
+}
+.actions span{
+    cursor:pointer;
+}
+.actions span:hover{
+    color:#1d9bf0;
+}
+.card,
+.notify{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+.chatBox{
+    background:white;
+    height:350px;
+    padding:20px;
+    border-radius:15px;
+    overflow-y:auto;
+}
+.chat{
+    background:#ececec;
+    padding:12px;
+    border-radius:12px;
+    margin-bottom:10px;
+    width:70%;
+}
+.chat.me{
+    background:#1d9bf0;
+    color:white;
+    margin-left:auto;
+}
+.messageInput{
+    display:flex;
+    margin-top:15px;
+}
+.messageInput input{
+    flex:1;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:25px;
+}
+.messageInput button{
+    margin-left:10px;
+    padding:12px 20px;
+    border:none;
+    border-radius:25px;
+    background:#1d9bf0;
+    color:white;
+    cursor:pointer;
+}
+.profile{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+}
+.profile img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+.stats{
+    display:flex;
+    justify-content:space-around;
+    margin-top:25px;
+}
+.right{
+    width:300px;
+    background:white;
+    position:fixed;
+    right:0;
+    height:100%;
+    padding:20px;
+}
+.right input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:#eef3f5;
+    outline:none;
+}
+.trending{
+    margin-top:30px;
+}
+.trending p{
+    margin:12px 0;
+    cursor:pointer;
+}
+.follow{
+    margin-top:30px;
+}
+.user{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:15px;
+}
+.user img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+.user span{
+    flex:1;
+    margin-left:10px;
+}
+.user button{
+    padding:8px 15px;
+    border:none;
+    border-radius:20px;
+    background:black;
+    color:white;
+    cursor:pointer;
+}
+.user button:hover{
+    background:#1d9bf0;
+}
+@media(max-width:1000px){
+.right{
+    display:none;
+}
+.main{
+    width:calc(100% - 250px);
+}
+}
+@media(max-width:700px){
+.sidebar{
+    width:80px;
+}
+.sidebar li{
+    font-size:0;
+}
+.sidebar i{
+    font-size:22px;
+}
+.logo{
+    font-size:28px;
+}
+.tweet-btn{
+    display:none;
+}
+.main{
+    margin-left:80px;
+    width:calc(100% - 80px);
+}
+}
