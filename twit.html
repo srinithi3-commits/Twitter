@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+
+    <link rel="stylesheet" href="new.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-brands fa-x-twitter"></i>
+        </div>
+        <ul>
+            <li onclick="showPage('home')">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </li>
+            <li onclick="showPage('explore')">
+                <i class="fa-solid fa-hashtag"></i>
+                Explore
+            </li>
+            <li onclick="showPage('notifications')">
+                <i class="fa-solid fa-bell"></i>
+                Notifications
+            </li>
+            <li onclick="showPage('messages')">
+                <i class="fa-solid fa-envelope"></i>
+                Messages
+            </li>
+            <li onclick="showPage('profile')">
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </li>
+        </ul>
+        <button class="tweet-btn">
+            Post
+        </button>
+    </aside>
+    <main class="main">
+        <section id="home" class="page active">
+            <h2>Home</h2>
+            <div class="tweet-box">
+                <img src="https://png.pngtree.com/png-clipart/20241231/original/pngtree-cute-profile-picture-girl-png-image_18421685.png">
+                <div class="input-area">
+                    <textarea id="tweetInput"
+                    placeholder="What's happening?"></textarea>
+                    <button onclick="postTweet()">
+                        Tweet
+                    </button>
+                </div>
+            </div>
+            <div id="tweetContainer">
+                <div class="tweet">
+                    <img src="https://i.pravatar.cc/50?img=25">
+                    <div class="content">
+                        <h3>
+                            Elon Musk
+                            <i class="fa-solid fa-circle-check verify"></i>
+                        </h3>
+                        <p>
+                            Welcome to my Twitter Clone 🚀
+                        </p>
+                        <div class="actions">
+                            <span onclick="like(this)">
+                                ❤️ 0
+                            </span>
+                            <span onclick="commentTweet()">
+                                💬 Comment
+                            </span>
+                            <span onclick="repostTweet()">
+                                🔁 Repost
+                            </span>
+                            <span onclick="bookmarkTweet()">
+                                🔖 Save
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="explore" class="page">
+            <h2>Explore</h2>
+            <div class="card">
+                <h3>#AI</h3>
+                <p>120K Posts</p>
+            </div>
+            <div class="card">
+                <h3>#JavaScript</h3>
+                <p>95K Posts</p>
+            </div>
+            <div class="card">
+                <h3>#HTML</h3>
+                <p>70K Posts</p>
+            </div>
+            <div class="card">
+                <h3>#CSS</h3>
+                <p>60K Posts</p>
+            </div>
+        </section>
+        <section id="notifications" class="page">
+            <h2>Notifications</h2>
+            <div class="notify">
+                ❤️ Emma liked your tweet
+            </div>
+            <div class="notify">
+                💬 Alex commented on your tweet
+            </div>
+            <div class="notify">
+                👤 David followed you
+            </div>
+        </section>
+        <section id="messages" class="page">
+            <h2>Messages</h2>
+            <div class="chatBox">
+            <div class="chat">
+                    <strong>Emma</strong>
+                    <p>Hello 👋</p>
+                </div>
+                <div class="chat me">
+                    <strong>You</strong>
+                    <p>Hi 😊</p>
+                </div>
+            </div>
+            <div class="messageInput">
+                <input
+                type="text"
+                id="message"
+                placeholder="Type a message">
+                <button onclick="sendMessage()">
+                    Send
+                </button>
+            </div>
+        </section>
+        <section id="profile" class="page">
+            <div class="profile">
+                <img src="https://png.pngtree.com/png-clipart/20241231/original/pngtree-cute-profile-picture-girl-png-image_18421685.png">
+                <h2>Pragathi M</h2>
+                <p>@praga07</p>
+                <p>
+                    Front-End Developer
+                </p>
+                <div class="stats">
+                 <div>
+                        <h3>120</h3>
+                        <p>Posts</p>
+                    </div>
+                    <div>
+                        <h3>850</h3>
+                        <p>Followers</p>
+                    </div>
+                    <div>
+                        <h3>430</h3>
+                        <p>Following</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <aside class="right">
+        <input
+        type="text"
+        placeholder="Search">
+        <div class="trending">
+            <h3>Trending</h3>
+            <p>#AI</p>
+            <p>#Coding</p>
+            <p>#Movies</p>
+            <p>#Football</p>
+            <p>#Technology</p>
+        </div>
+        <div class="follow">
+            <h3>Who to Follow</h3>
+            <div class="user">
+                <img src="https://i.pravatar.cc/45?img=20">
+                <span>lisa</span>
+                <button>Follow</button>
+            </div>
+            <div class="user">
+                <img src="https://i.pravatar.cc/45?img=40">
+                <span>lucy</span>
+                <button>Follow</button>
+            </div>
+            <div class="user">
+                <img src="https://i.pravatar.cc/45?img=30">
+                <span>zara</span>
+                <button>Follow</button>
+            </div>
+        </div>
+    </aside>
+</div>
+<script src="new.js"></script>
+</body>
+</html>
